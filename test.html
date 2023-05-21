@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <p>Nhap key can tim gia tri</p>
+  <input type="text" id="text">
+  <button id="btntim">tim gia tri</button>
+  <div id="giatri"></div>
+
+  <script>
+
+    let btn = document.getElementById('btntim');
+    localStorage.setItem("ten",JSON.stringify("Nguyen van teo") );
+    localStorage.setItem("tuoi",JSON.stringify(16));
+    btn.addEventListener('click', function () {
+      const items = document.getElementById('text').value;
+      let giaTri = localStorage.getItem(items);
+      document.getElementById('giatri').innerHTML = giaTri;   
+    })
+  </script>
+</body>
+
+</html>

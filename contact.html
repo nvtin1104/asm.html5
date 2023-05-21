@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Lab</title>
+    <link rel="stylesheet" href="./access/css/rep.css">
+    <link rel="stylesheet" href="./access/css/contact.css">
+    <link rel="stylesheet" href="./access/css/index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.css" />
+    <link rel="stylesheet" href="./node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="icon" href="./access/img/logo.ico" type="image/x-icon">
+</head>
+<body>
+    <main>
+        <header class="header pad-12 d-flex justify-content-between">
+            <div class="header__logo mx-4 mx-md-5">
+                <img class="mt-1" src="./access/img/img__Index/logo.png.webp" alt="">
+            </div>
+            <nav class="nav__menu" id="nav__menu">
+                <ul class="nav">
+                    <li class="link-item">
+                        <a href="index.html" class="nav-link ">Home</a>
+                    </li>
+                    <li class="link-item">
+                        <a href="#" class="nav-link">Features</a>
+                    </li>
+                    <li class="link-item">
+                        <a href="#" class="nav-link">Pricing</a>
+                    </li>
+                    <li class="link-item">
+                        <a href="#download" class="nav-link">Download</a>
+                    </li>
+                    <li class="link-item">
+                        <a href="#" class="nav-link">Blog</a>
+                    </li>
+                    <li class="link-item">
+                        <a href="./contact.html" class="nav-link">Contact</a>
+                    </li>
+                    <li class="link-item">
+                        <a href="account.html" id="accountMobile" class="account-mobile text-white nav-link"><i class="bi bi-person-lines-fill"></i><span>Account</span></a>
+                        <div id="openLoginMobile" class="login-mobile text-white nav-link"><i class="bi bi-person-circle "></i><span>Log in</span></div>
+                    </li>
+                </ul>
+            </nav>
+            <div class="header__btn d-flex mx-lg-5 mx-sm-3">
+                <div class="account" id="account">
+                    <a href="account.html"><i class="bi bi-person-lines-fill"></i><Span>Me</Span></a>
+                </div>
+                <div class="btn-login" id="openLogin">
+                    <a class="text-uppercase text-white">Sign in</a>
+                </div>
+                <div class="btn-nav text-white" id="openNav">
+                    <i class="bi bi-list"></i>
+                </div>
+            </div>
+        </header>
+        <section class="container-fluid contact pad-rep">
+            <div class="row">
+                <div class="col-md-6 order-2 order-md-1">
+                    <div id="mapid" class="float-md-end">
+                    </div>
+                </div>
+                <div class="col-md-6 order-1 order-md-2">
+                    <div class="contact--box">
+                        <form class="form-contact" action="https://formsubmit.co/el/pisowa" method="POST">
+                            <h3>Contact us</h3>
+                            <div class="row row--form">
+                                <div class="col-md-6">
+                                    <input class="ip-form w-100" type="text" placeholder="First name..." id="firstname"
+                                        name="firstname" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <input class="ip-form w-100" type="text" placeholder="Last name..." id="lastname"
+                                        name="lastname" required>
+                                </div>
+                                <div class="col-lg-12">
+                                    <input class="ip-form w-100" type="email" placeholder="Email..." id="email"
+                                        name="email" required>
+                                </div>
+                                <div class="col-lg-12">
+                                    <input class="ip-form w-100" placeholder="Phone number..." type="tel" id="phone"
+                                        name="phone" required>
+                                </div>
+                                <div>
+                                    <textarea class="ip-form w-100" placeholder="Message..." id="message" name="message"
+                                        required></textarea>
+                                </div>
+                            </div>
+                            <input class="btn-all btn--submit text-uppercase text-white" type="submit" value="Submit">
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer class="container-fluid pad-footer">
+            <section class="row--footer row pad-rep">
+                <div class="col-lg-6">
+                    <div class="footer--logo">
+                        <img src="./access/img/img__Index/logo.png.webp" alt="">
+                    </div>
+                    <p class=" footer-text w-75">
+                        Utrust is a seamless integration that gives e-commerce businesses the power to accept digital
+                        currencies - and get all the benefit.
+                    </p>
+                    <div class="footer--icon">
+                        <i class="bi bi-facebook"></i>
+                        <i class="bi bi-linkedin"></i>
+                        <i class="bi bi-instagram"></i>
+                        <i class="bi bi-youtube"></i>
+                    </div>
+                </div>
+                <ul class="col-lg-2 col-md-4 text-white">
+                    <h4 class="footer__ul-title">Quick Links</h4>
+                    <li>
+                        <a href="#">Work</a>
+                    </li>
+                    <li>
+                        <a href="#">Services</a>
+                    </li>
+                    <li>
+                        <a href="#">Products</a>
+                    </li>
+                    <li>
+                        <a href="#">Tips & Tricks</a>
+                    </li>
+                </ul>
+                <ul class="col-lg-2 col-md-4 text-white">
+                    <h4 class="footer__ul-title">Support</h4>
+                    <li>
+                        <a href="#">Contact</a>
+                    </li>
+                    <li>
+                        <a href="#">About</a>
+                    </li>
+                    <li>
+                        <a href="#">Services</a>
+                    </li>
+                    <li>
+                        <a href="#">Blog</a>
+                    </li>
+                    <li>
+                        <a href="#">Home</a>
+                    </li>
+                </ul>
+                <ul class="col-lg-2 col-md-4 text-white">
+                    <h4 class="footer__ul-title">Navigation</h4>
+                    <li>
+                        <a href="#">Work</a>
+                    </li>
+                    <li>
+                        <a href="#">Services</a>
+                    </li>
+                    <li>
+                        <a href="#">Products</a>
+                    </li>
+                    <li>
+                        <a href="#">Tips & Tricks</a>
+                    </li>
+                </ul>
+            </section>
+            <div class="copyright text-center">
+                <p class="copyright--text">Copyright ©2023 All rights reserved | This template is made with <span><i
+                            class="bi bi-heart-fill"></i></span> by
+                    <span><a href="https://colorlib.com/">Colorlib</a></span>
+                </p>
+            </div>
+        </footer>
+    </main>
+    <div class="modal-login" id="modal-login">
+        <div class="modal--bg row">
+            <div class="btn-close text-white" id="close-login">
+            </div>
+            <div class="col-md-6 modal-left">
+                <div class="box-signin ">
+                    <img src="./access/img/img__Index/login-avatar.jpg" alt="">
+                    <p class="modal-ask">You don't have an account?<span id="signup-open" class="ask--text"> Sign up</span></p>
+                </div>
+                <div class="box-signup d-none">
+                    <img src="./access/img/img__Index/login-avatar.jpg" alt="">
+                    <p class="modal-ask">You have an account?<span id="signin-open" class="ask--text"> Sign in</span></p>
+                </div>
+            </div>
+            <div class="col-md-6 modal-right">
+                <div class="ip-signin ">
+                    <p class="signin--title">
+                        Sign in
+                    </p>
+                    <form class="form--signin" onsubmit=" xuLyDangNhap(event)">
+                        <input  type="text" name="username" placeholder="Username..." id="username-si">
+                        <input  type="password" name="password" placeholder="Password..." id="password-si">
+                        <div class="check-box"><input  type="checkbox"><span class="mx-2">Remember me?</span>
+                        </div>
+                        <button type="submit" class="btn-modal">sign in</button>
+                    </form>
+                </div>
+                <div class="ip-signup d-none">
+                    <p class="signup--title">
+                        Sign up
+                    </p>
+                    <form class="form--signup" onsubmit="xuLyDangKy(event)">
+                        <input type="text" name="username" placeholder="Username..." id="username-su">
+                        <input type="email" name="email" placeholder="Email..." id="email">
+                        <input type="password" name="password" placeholder="Password..." id="password-su">
+                        <input type="password" name="password" placeholder="Confirm password..."
+                            id="cf-password-su">
+                        <div class="check-box"><input id="checkAgree" type="checkbox"><span class="mx-2">Agree to the <span><a
+                                        href="#">terms</a></span> and <span><a href="#">conditions</a></span>
+                                conditions.</span></div>
+                        <button type="submit" class="btn-modal">sign up</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="./access/js/index.js"></script>
+<script src="./access/js/contact.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.js"></script>
+</html>

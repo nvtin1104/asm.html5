@@ -1,0 +1,32 @@
+{
+	"folders": [
+		{
+			"path": "D:/F8"
+		},
+		{
+			"path": "../../.."
+		},
+		{
+			"path": "../../../../Kien Thuc Cu"
+		},
+		{
+			"path": "../../../../Boostrap5"
+		},
+		{
+			"path": "../.."
+		},
+		{
+			"path": "../../../../Block2_HocKySring/ASM_Javascrit"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "Html5 - CSS3"
+	},
+	"extensions": {
+		"recommendations": [
+			"whensunset.chatgpt-china",
+			"wilfison.haml-boostrap",
+			"hansuxdev.bootstrap5-snippets"
+		]
+	}
+}

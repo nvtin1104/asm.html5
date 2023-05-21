@@ -1,0 +1,251 @@
+:root {
+    --main-color: #101212;
+    --text-color-main: #fff;
+    --bg-gradian: linear-gradient(to right, #bc42f2, #9d42f2, #6f42f2, #5964f2, #468bf2, #42abf2) !important;
+}
+
+/* Điện thoại thông minh nhỏ (ví dụ: iPhone SE): */
+
+/* Điện thoại thông minh trung bình (ví dụ: iPhone 7, Samsung Galaxy S7): */
+@media only screen and (max-width: 47.9375em) {
+
+    .slider-title-2 {
+        font-size: 32px !important;
+    }
+
+    .btn-login {
+        display: none;
+    }
+
+    .header__btn {
+        line-height: 76px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .btn-nav {
+        display: block;
+        margin-left: 8px;
+        padding: 20px 10px;
+        margin-bottom: 8px;
+        font-size: 24px;
+        line-height: 36px;
+    }
+
+    .nav__open {
+        display: block !important;
+    }
+
+    .nav__menu {
+        display: none;
+        position: absolute;
+        top: 74px;
+        width: calc(100% - 64px);
+        left: 32px;
+        margin: auto;
+        background-color: var(--main-color);
+    }
+
+    .nav__menu .nav {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .nav .link-item {
+        width: 100%;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        border-left: 1px solid rgba(255, 255, 255, 0.1);
+        border-right: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .nav .link-item:first-child {
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .pad-rep {
+        padding: 100px 16px !important;
+    }
+
+    .col-rep {
+        flex-direction: column !important;
+    }
+
+    .about-2-box {
+        margin-left: -6px !important;
+    }
+
+
+    .p-32 {
+        padding: 16px !important;
+    }
+
+    .buy-box {
+
+        margin-left: -12px;
+        width: 280px !important;
+    }
+
+    .box-rep {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .row--footer ul {
+        margin-top: 24px;
+    }
+
+    .copyright--text {
+        font-size: 13px;
+    }
+
+    #mapid {
+        min-height: 200px !important;
+        margin-top: 32px;
+    }
+
+    .ip-signin,
+    .box-signin {
+        padding: 32px 16px;
+    }
+
+    .modal-right {
+        order: 1;
+    }
+
+    .modal-left {
+        order: 2;
+    }
+
+    .modal-left img {
+        display: none;
+    }
+
+    .signup--title {
+        padding-top: 32px;
+        margin-left: 8px;
+    }
+
+    .account {
+        display: none !important;
+    }
+    .account-mobile {
+        display: none !important;
+    }
+    .account-mobile-on {
+        display: block !important;
+    }
+}
+
+/*Máy tính bảng (ví dụ: iPad):  */
+@media only screen and (min-width: 48em) and (max-width: 64em) {
+    .header__btn {
+        justify-content: center;
+        align-items: center;
+    }
+
+    .btn-nav {
+        display: block;
+        margin-left: 8px;
+        padding: 20px 10px;
+        margin-bottom: 8px;
+        font-size: 24px;
+        line-height: 36px;
+    }
+
+    .nav__open {
+        display: block !important;
+    }
+
+    .nav__menu {
+        display: none;
+        position: absolute;
+        top: 74px;
+        width: calc(100% - 64px);
+        left: 32px;
+        margin: auto;
+        background-color: var(--main-color);
+    }
+
+    .nav__menu .nav {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .nav .link-item {
+        width: 100%;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        border-left: 1px solid rgba(255, 255, 255, 0.1);
+        border-right: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .nav .link-item:first-child {
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .pad-rep {
+        padding: 100px 32px !important;
+    }
+
+    .p-32 {
+        padding: 32px !important;
+    }
+
+    .buy-box {
+        width: 320px !important;
+    }
+
+    .about-2__img,
+    .about-1__img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .row--footer ul {
+        margin-top: 24px;
+    }
+
+    .login-mobile {
+        display: none !important;
+    }
+
+    .account-mobile {
+        display: none !important;
+    }
+
+    .account-on {
+        display: block !important;
+    }
+}
+
+/*  Máy tính để bàn (ví dụ: độ phân giải màn hình 1366 x 768):*/
+@media only screen and (min-width: 64.0625em) {
+    .btn-nav {
+        display: none;
+    }
+
+    .pad-rep {
+        padding: 100px 64px !important;
+    }
+
+    .about-1__img img {
+        margin-right: 32px;
+    }
+
+    .p-32 {
+        padding: 32px !important;
+    }
+
+    .login-mobile {
+        display: none !important;
+    }
+
+    .account-mobile {
+        display: none !important;
+    }
+
+    .account-on {
+        display: block !important;
+    }
+}
