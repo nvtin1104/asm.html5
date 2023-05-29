@@ -156,6 +156,7 @@ function xuLyDangNhap(event) {
             console.log(checkLogin)
             localStorage.setItem("checkLogin", JSON.stringify(checkLogin))
             alert("đăng nhập thành công");
+            
             location.href = "index.html"
         }
         else {
