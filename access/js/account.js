@@ -29,7 +29,8 @@
 //   }
 // });
 let accountLogout = document.getElementById('accountLogout');
-console.log(accountLogout)
+
 accountLogout.addEventListener('click', () => {
     localStorage.removeItem("checkLogin");
+    location.href = 'index.html'
 })

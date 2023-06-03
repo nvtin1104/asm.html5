@@ -45,7 +45,6 @@ signinOpen.addEventListener('click', () => {
     ipSignin.classList.remove('d-none');
 })
 // // login and log out
-
 // localStorage.removeItem("checkLogin")
 let accountManagement = document.getElementById('account');
 let accountManagementMobile = document.getElementById('accountMobile');
@@ -56,7 +55,7 @@ if (checkedLogin == 1) {
     accountManagement.classList.add('account-on');
     accountManagementMobile.classList.add('account-mobile-on');
 }
-else if(checkedLogin === null){
+else if (checkedLogin === null) {
     openLogin.classList.remove('d-none')
     accountManagement.classList.remove('account-on')
     openLoginMobile.classList.remove('d-none')
@@ -82,42 +81,41 @@ function xuLyDangKy(event) {
     //kiểm tra hợp lệ
     if (userName === '' || email === '' || password === '') {
         alert('Vui lòng điền đầy đủ thông tin.');
-        return ; // Ngăn không cho biểu mẫu được gửi đi
-      }
-    if (!checkAgree)  
-    {
+        return; // Ngăn không cho biểu mẫu được gửi đi
+    }
+    if (!checkAgree) {
         alert('Vui lòng đồng ý với điều khoản.');
         return;
     }
-    if(!/^[a-zA-Z][a-zA-Z0-9_]{2,15}$/.test(userName)){
+    if (!/^[a-zA-Z][a-zA-Z0-9_]{2,15}$/.test(userName)) {
         alert('Vui lòng nhập tên người dùng hợp lệ.');
         return;
     }
-    if(! /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/.test(password)){
+    if (!/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/.test(password)) {
         alert('Vui lòng nhập mật khẩu hợp lệ.');
         return;
     }
-    if (passwordCf != password){
+    if (passwordCf != password) {
         alert('Vui lòng nhập lại mật khẩu.');
         return;
     }
     //Lưu thông tin tài khoản với key "user"
-    let dsTaiKhoan = JSON.parse(localStorage.getItem("loginUser"))
-    //Trường hợp key "user" chưa tồn tại, dsTaiKhoan = null
-    if (!dsTaiKhoan) {
+    let accountList = JSON.parse(localStorage.getItem("loginUser"))
+    //Trường hợp key "user" chưa tồn tại, accountList = null
+    if (!accountList) {
         //tạo tài khoản mới
         let admin = new Account("admin", "admin@gmail.com", "admin");
-        dsTaiKhoan = []
+        accountList = []
         //lưu đối tượng vào mảng
-        dsTaiKhoan.push(admin)
-        //Lưu mảng dsTaiKhoan vào localStorage
-        localStorage.setItem("loginUser", JSON.stringify(dsTaiKhoan))
+        accountList.push(admin)
+        //Lưu mảng accountList vào localStorage
+        localStorage.setItem("loginUser", JSON.stringify(accountList))
     }
     //trường hợp đã tồn tại tài khoản
     else {
         //kiểm tra xem username có tồn tại chưa
-        const foundEmail = dsTaiKhoan.find((user) => user.email === email);
-        const foundUser = dsTaiKhoan.find((user) => user.userName === userName);
+        const foundEmail = accountList.find((user) => user.email === email);
+        const foundUser = accountList.find((user) => user.userName === userName);
 
         if (foundUser) {
             alert("Tài khoản đã tồn tại");
@@ -131,12 +129,13 @@ function xuLyDangKy(event) {
 
     }
     // trường hợp không trùng thì tạo tài khoản mới cho người ta
-    let userMoi = new Account(userName, email, password)
+    let newUser = new Account(userName, email, password)
     //lưu thêm vào mảng 
-    dsTaiKhoan.push(userMoi)
+    accountList.push(newUser)
     //lưu mảng mới vào Localstorage 
-    localStorage.setItem("loginUser", JSON.stringify(dsTaiKhoan))
+    localStorage.setItem("loginUser", JSON.stringify(accountList))
     alert('Đăng ký tài khoản thành công')
+    location.href ='index.html';
 }
 
 function xuLyDangNhap(event) {
@@ -147,20 +146,30 @@ function xuLyDangNhap(event) {
         alert('Chưa nhập user hoặc mật khẩu');
         return;
     }
-    const dsTaiKhoan = JSON.parse(localStorage.getItem("loginUser"))
-    if (dsTaiKhoan) {
-        const found = dsTaiKhoan.find((user) => user.userName === userName && user.password === password);
+    const accountList = JSON.parse(localStorage.getItem("loginUser"))
+    if (accountList) {
+        const found = accountList.find((user) => user.userName === userName && user.password === password);
         if (found) {
             event.preventDefault();
             let checkLogin = 1;
-            console.log(checkLogin)
+            let userNow = userName;
+            localStorage.setItem("userNow", JSON.stringify(userNow))
             localStorage.setItem("checkLogin", JSON.stringify(checkLogin))
             alert("đăng nhập thành công");
-            
-            location.href = "index.html"
+            // check
+            // bat modal login
+            modalLogin.classList.remove('d-flex')
+            openLogin.classList.add('d-none');
+            openLoginMobile.classList.add('d-none');
+            accountManagement.classList.add('account-on');
+            accountManagementMobile.classList.add('account-mobile-on');
+          
         }
         else {
             alert("tài khoản không tồn tại")
         }
+    }
+    else {
+        alert("tài khoản không tồn tại")
     }
 }

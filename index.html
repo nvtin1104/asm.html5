@@ -255,79 +255,7 @@
                 </div>
             </div>
         </section>
-        <footer class="container-fluid pad-footer">
-            <section class="row--footer row pad-rep">
-                <div class="col-lg-6">
-                    <div class="footer--logo">
-                        <img src="./access/img/img__Index/logo.png.webp" alt="">
-                    </div>
-                    <p class=" footer-text w-75">
-                        Utrust is a seamless integration that gives e-commerce businesses the power to accept digital
-                        currencies - and get all the benefit.
-                    </p>
-                    <div class="footer--icon">
-                        <i class="bi bi-facebook"></i>
-                        <i class="bi bi-linkedin"></i>
-                        <i class="bi bi-instagram"></i>
-                        <i class="bi bi-youtube"></i>
-                    </div>
-                </div>
-                <ul class="col-lg-2 col-md-4 text-white">
-                    <h4 class="footer__ul-title">Quick Links</h4>
-                    <li>
-                        <a href="#">Work</a>
-                    </li>
-                    <li>
-                        <a href="#">Services</a>
-                    </li>
-                    <li>
-                        <a href="#">Products</a>
-                    </li>
-                    <li>
-                        <a href="#">Tips & Tricks</a>
-                    </li>
-                </ul>
-                <ul class="col-lg-2 col-md-4 text-white">
-                    <h4 class="footer__ul-title">Support</h4>
-                    <li>
-                        <a href="#">Contact</a>
-                    </li>
-                    <li>
-                        <a href="#">About</a>
-                    </li>
-                    <li>
-                        <a href="#">Services</a>
-                    </li>
-                    <li>
-                        <a href="#">Blog</a>
-                    </li>
-                    <li>
-                        <a href="#">Home</a>
-                    </li>
-                </ul>
-                <ul class="col-lg-2 col-md-4 text-white">
-                    <h4 class="footer__ul-title">Navigation</h4>
-                    <li>
-                        <a href="#">Work</a>
-                    </li>
-                    <li>
-                        <a href="#">Services</a>
-                    </li>
-                    <li>
-                        <a href="#">Products</a>
-                    </li>
-                    <li>
-                        <a href="#">Tips & Tricks</a>
-                    </li>
-                </ul>
-            </section>
-            <div class="copyright text-center">
-                <p class="copyright--text">Copyright ©2023 All rights reserved | This template is made with <span><i
-                            class="bi bi-heart-fill"></i></span> by
-                    <span><a href="https://colorlib.com/">Colorlib</a></span>
-                </p>
-            </div>
-        </footer>
+        <iframe id="myIframe" src="./footer.html" width="100%" frameborder="1"></iframe>
     </main>
     <div class="modal-login" id="modal-login">
         <div class="modal--bg row">
@@ -345,14 +273,14 @@
                 </div>
             </div>
             <div class="col-md-6 modal-right">
-                <div class="ip-signin ">
+                <div class="ip-signin">
                     <p class="signin--title">
                         Sign in
                     </p>
-                    <form class="form--signin" onsubmit=" xuLyDangNhap(event)">
+                    <form id="formSignin" class="form--signin" id="formSignin" onsubmit=" xuLyDangNhap(event)">
                         <input  type="text" name="username" placeholder="Username..." id="username-si">
                         <input  type="password" name="password" placeholder="Password..." id="password-si">
-                        <div class="check-box"><input  type="checkbox"><span class="mx-2">Remember me?</span>
+                        <div class="check-box"><input id="checkBoxLogin" type="checkbox"><span class="mx-2">Remember me?</span>
                         </div>
                         <button type="submit" class="btn-modal">sign in</button>
                     </form>
@@ -361,7 +289,7 @@
                     <p class="signup--title">
                         Sign up
                     </p>
-                    <form class="form--signup" onsubmit="xuLyDangKy(event)">
+                    <form class="form--signup" id="form--signup" onsubmit="xuLyDangKy(event)">
                         <input type="text" name="username" placeholder="Username..." id="username-su">
                         <input type="email" name="email" placeholder="Email..." id="email">
                         <input type="password" name="password" placeholder="Password..." id="password-su">
@@ -378,6 +306,7 @@
     </div>
 </body>
 <script src="./access/js/index.js"></script>
+<script src="./access/js/ifarme.js"></script>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
     AOS.init();

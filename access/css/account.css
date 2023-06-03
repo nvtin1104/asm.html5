@@ -1,3 +1,106 @@
-#accountLogout{
-    margin-top: 100px;
+ /* main */
+ body {
+    font-family: 'Inter', sans-serif !important;
 }
+
+* {
+    box-sizing: border-box;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none !important;
+}
+iframe{
+   display: block !important;
+}
+
+/* class all */
+:root {
+    --text-gray: #97a7af;
+    --main-color: #191c1c;
+    --text-color-main: #fff;
+    --bg-gradian: linear-gradient(to right, #bc42f2, #9d42f2, #6f42f2, #5964f2, #468bf2, #42abf2) !important;
+}
+/* main */
+main{
+    margin-top: 76px;
+}
+iframe{
+    display: block !important;
+ }
+ .control-account{
+    width: 1200px;
+    max-width: 100%;
+    margin: auto;
+    padding: 64px 0;
+    display: flex;
+ }
+ /* sidebar */
+ /* .sidebar-account{
+   display: none;
+ } */
+ .sidebar-account ul{
+    width: 240px;
+    padding: 0;
+ }
+ .sidebar-account ul li a{
+    display: inline-block;
+    width: 100%;
+    padding: 12px 12px ;
+    border: 1px solid #ccc;
+    color: var(--main-color);
+ }
+ .sidebar-account ul li a i{
+    padding: 5px;
+ }
+ /* account main */
+ .account-main{
+    margin-left: 12px;
+    border: 1px solid #ccc;
+    padding: 16px 32px;
+    flex: 1;
+ }
+ /* info-controls */
+ .infor-controls h4,
+ .password-controls h4{
+    text-decoration: underline;
+ }
+ .form-info{
+    margin-left: 32px;
+ }
+ .form-info div{
+    display: flex;
+ }
+ .form-info label{
+    width: 100px;
+  padding: 8px;
+ }
+ .form-info div input{
+    flex: 1;
+    outline: none;
+    border: none;
+    padding: 8px;
+    border-bottom: 2px solid #ccc;
+ }
+ .btn-info, .btn-password{
+   justify-content: right;
+   padding: 32px 0;
+ }
+ .btn-info button,
+ .btn-password button{
+    padding:8px 16px;
+    margin: 8px;
+    background-color: #ccc;
+    border: none;
+ }
+ .infor-controls
+ {
+    border-bottom: 2px solid #ccc ;
+ }
+ .password-controls{
+    margin-top: 32px;
+ }

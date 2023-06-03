@@ -16,128 +16,192 @@
     <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.css">
     <link rel="icon" href="./access/img/logo.ico" type="image/x-icon">
 </head>
+
 <body>
+    <header class="header pad-12 d-flex justify-content-between">
+        <div class="header__logo mx-4 mx-md-5">
+            <img class="mt-1" src="./access/img/img__Index/logo.png.webp" alt="">
+        </div>
+        <nav class="nav__menu" id="nav__menu">
+            <ul class="nav">
+                <li class="link-item">
+                    <a href="index.html" class="nav-link ">Home</a>
+                </li>
+                <li class="link-item">
+                    <a href="#" class="nav-link">Features</a>
+                </li>
+                <li class="link-item">
+                    <a href="./video.html" class="nav-link">Pricing</a>
+                </li>
+                <li class="link-item">
+                    <a href="#download" class="nav-link">Download</a>
+                </li>
+                <li class="link-item">
+                    <a href="#" class="nav-link">Blog</a>
+                </li>
+                <li class="link-item">
+                    <a href="./contact.html" class="nav-link">Contact</a>
+                </li>
+                <li class="link-item">
+                    <a href="account.html" id="accountMobile" class="account-mobile text-white nav-link"><i
+                            class="bi bi-person-lines-fill"></i><span>Account</span></a>
+                    <div id="openLoginMobile" class="login-mobile text-white nav-link"><i
+                            class="bi bi-person-circle "></i><span>Log in</span></div>
+                </li>
+            </ul>
+        </nav>
+        <div class="header__btn d-flex mx-lg-5 mx-sm-3">
+            <div class="account" id="account">
+                <a href="account.html"><i class="bi bi-person-lines-fill"></i><Span>Me</Span></a>
+            </div>
+            <div class="btn-login" id="openLogin">
+                <a class="text-uppercase text-white">Sign in</a>
+            </div>
+            <div class="btn-nav text-white" id="openNav">
+                <i class="bi bi-list"></i>
+            </div>
+        </div>
+    </header>
     <main>
-        <header class="header pad-12 d-flex justify-content-between">
-            <div class="header__logo mx-4 mx-md-5">
-                <img class="mt-1" src="./access/img/img__Index/logo.png.webp" alt="">
-            </div>
-            <nav class="nav__menu" id="nav__menu">
-                <ul class="nav">
-                    <li class="link-item">
-                        <a href="index.html" class="nav-link ">Home</a>
+        <div class="control-account">
+            <aside class="sidebar-account">
+                <ul>
+                    <li><a href="#">
+                            <i class="bi bi-person-circle"></i>Quản lí thông tin </a>
                     </li>
-                    <li class="link-item">
-                        <a href="#" class="nav-link">Features</a>
+
+                    <li><a href="#">
+                        <i class="bi bi-person-gear"></i>Quản lí tài khoản  </a>
                     </li>
-                    <li class="link-item">
-                        <a href="#" class="nav-link">Pricing</a>
+
+                    <li><a href="#">
+                        <i class="bi bi-x-diamond"></i>Quản lí gói đăng ký   </a>
                     </li>
-                    <li class="link-item">
-                        <a href="index.html" class="nav-link">Download</a>
+
+                    <li><a href="#">
+                        <i class="bi bi-wallet2"></i>Thông tin thanh toán</a>
                     </li>
-                    <li class="link-item">
-                        <a href="#" class="nav-link">Blog</a>
-                    </li>
-                    <li class="link-item">
-                        <a href="./contact.html" class="nav-link">Contact</a>
-                    </li>
+                    <li><a href="#" id="accountLogout">
+                        <i class="bi bi-box-arrow-right"></i></i>Đăng xuất </a>
+                </li>
+
                 </ul>
-            </nav>
-            <div class="header__btn d-flex mx-lg-5 mx-sm-3">
-                <div class="btn-login" id="openLogin">
-                    <a class="text-uppercase text-white">Sign in</a>
-                </div>
-                <div class="btn-nav text-white" id="openNav">
-                    <i class="bi bi-list"></i>
-                </div>
-            </div>
-        </header>
-       <section>
-        <button id="accountLogout">log out</button>
-        <p>Thong tin tai khoan</p>
-        <label for="date">Ngay sinh</label>
-        <input type="date" name="date">
-        <label for="url">Facebook</label>
-        <input type="url" name="url">
-        
-       </section>
-        <footer class="container-fluid pad-footer">
-            <section class="row--footer row pad-rep">
-                <div class="col-lg-6">
-                    <div class="footer--logo">
-                        <img src="./access/img/img__Index/logo.png.webp" alt="">
-                    </div>
-                    <p class=" footer-text w-75">
-                        Utrust is a seamless integration that gives e-commerce businesses the power to accept digital
-                        currencies - and get all the benefit.
-                    </p>
-                    <div class="footer--icon">
-                        <i class="bi bi-facebook"></i>
-                        <i class="bi bi-linkedin"></i>
-                        <i class="bi bi-instagram"></i>
-                        <i class="bi bi-youtube"></i>
-                    </div>
-                </div>
-                <ul class="col-lg-2 col-md-4 text-white">
-                    <h4 class="footer__ul-title">Quick Links</h4>
-                    <li>
-                        <a href="#">Work</a>
-                    </li>
-                    <li>
-                        <a href="#">Services</a>
-                    </li>
-                    <li>
-                        <a href="#">Products</a>
-                    </li>
-                    <li>
-                        <a href="#">Tips & Tricks</a>
-                    </li>
-                </ul>
-                <ul class="col-lg-2 col-md-4 text-white">
-                    <h4 class="footer__ul-title">Support</h4>
-                    <li>
-                        <a href="#">Contact</a>
-                    </li>
-                    <li>
-                        <a href="#">About</a>
-                    </li>
-                    <li>
-                        <a href="#">Services</a>
-                    </li>
-                    <li>
-                        <a href="#">Blog</a>
-                    </li>
-                    <li>
-                        <a href="#">Home</a>
-                    </li>
-                </ul>
-                <ul class="col-lg-2 col-md-4 text-white">
-                    <h4 class="footer__ul-title">Navigation</h4>
-                    <li>
-                        <a href="#">Work</a>
-                    </li>
-                    <li>
-                        <a href="#">Services</a>
-                    </li>
-                    <li>
-                        <a href="#">Products</a>
-                    </li>
-                    <li>
-                        <a href="#">Tips & Tricks</a>
-                    </li>
-                </ul>
+            </aside>
+            <section class="account-main">
+                   <section class="infor-controls">
+                    <h4>
+                        Quản lí thông tin
+                    </h4>
+                    <form class="form-info" action="#">
+                        <div class="username-info">
+                            <label for="username-info">User:</label>
+                            <input type="text" name="username-infor" id="username-info" disabled>
+                        </div>
+                        <div class="name-info">
+                            <label for="name-info">Name:</label>
+                            <input type="text" name="name-infor" id="name-info" placeholder="Điền vào họ tên của bạn ...">
+                        </div>
+                        <div class="date-info">
+                            <label for="date-info">Date:</label>
+                            <input type="date" name="date-infor" id="date-info" >
+                        </div>
+                        <div class="tel-info">
+                            <label for="tel-info">Tel:</label>
+                            <input type="tel" name="tel-infor" id="tel-info" >
+                        </div>
+                        <div class="email-info">
+                            <label for="name-info">Email:</label>
+                            <input type="email" name="email-infor" id="email-info" >
+                        </div>
+                        <div class="address-info">
+                            <label for="name-info">Address:</label>
+                            <input type="text" name="address-infor" id="address-info" >
+                        </div>
+                        <div class="btn-info">
+                            <button class="info-change">Thay đổi thông tin</button>
+                            <button type="submit" class="info-save">Lưu</button>
+                        </div>
+                    </form>
+                   </section>
+                   <section class="password-controls">
+                    <h4>
+                        Quản lí mật khẩu
+                    </h4>
+                    <form class="form-info" action="#">
+                        <div class="password-info">
+                            <label for="password-info">Password:</label>
+                            <input type="text" name="password-infor" id="password-info">
+                        </div>
+                        <div class="new-password-info">
+                            <label for="new-password-info">New:</label>
+                            <input type="text" name="new-password-infor" id="new-password-info">
+                        </div>
+                        <div class="cf-password-info">
+                            <label for="cf-password-info">Comfin:</label>
+                            <input type="text" name="cf-password-infor" id="cf-password-info">
+                        </div>
+                        <div class="btn-password">
+                            <button class="password-change">Thay đổi mật khẩu</button>
+                            <button type="submit" class="password-save">Lưu</button>
+                        </div>
+                    </form>
+                   </section>
             </section>
-            <div class="copyright text-center">
-                <p class="copyright--text">Copyright ©2023 All rights reserved | This template is made with <span><i
-                            class="bi bi-heart-fill"></i></span> by
-                    <span><a href="https://colorlib.com/">Colorlib</a></span>
-                </p>
-            </div>
-        </footer>
+        </div>
     </main>
+    <iframe id="myIframe" src="./footer.html" width="100%" frameborder="0"></iframe>
+    <div class="modal-login" id="modal-login">
+        <div class="modal--bg row">
+            <div class="btn-close text-white" id="close-login">
+            </div>
+            <div class="col-md-6 modal-left">
+                <div class="box-signin ">
+                    <img src="./access/img/img__Index/login-avatar.jpg" alt="">
+                    <div id="container"></div>
+                    <p class="modal-ask">You don't have an account?<span id="signup-open" class="ask--text"> Sign
+                            up</span></p>
+                </div>
+                <div class="box-signup d-none">
+                    <img src="./access/img/img__Index/login-avatar.jpg" alt="">
+                    <p class="modal-ask">You have an account?<span id="signin-open" class="ask--text"> Sign in</span>
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-6 modal-right">
+                <div class="ip-signin">
+                    <p class="signin--title">
+                        Sign in
+                    </p>
+                    <form id="formSignin" class="form--signin" id="formSignin" onsubmit=" xuLyDangNhap(event)">
+                        <input type="text" name="username" placeholder="Username..." id="username-si">
+                        <input type="password" name="password" placeholder="Password..." id="password-si">
+                        <div class="check-box"><input id="checkBoxLogin" type="checkbox"><span class="mx-2">Remember
+                                me?</span>
+                        </div>
+                        <button type="submit" class="btn-modal">sign in</button>
+                    </form>
+                </div>
+                <div class="ip-signup d-none">
+                    <p class="signup--title">
+                        Sign up
+                    </p>
+                    <form class="form--signup" id="form--signup" onsubmit="xuLyDangKy(event)">
+                        <input type="text" name="username" placeholder="Username..." id="username-su">
+                        <input type="email" name="email" placeholder="Email..." id="email">
+                        <input type="password" name="password" placeholder="Password..." id="password-su">
+                        <input type="password" name="password" placeholder="Confirm password..." id="cf-password-su">
+                        <div class="check-box"><input id="checkAgree" type="checkbox"><span class="mx-2">Agree to the
+                                <span><a href="#">terms</a></span> and <span><a href="#">conditions</a></span>
+                                conditions.</span></div>
+                        <button type="submit" class="btn-modal">sign up</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 <script src="./access/js/index.js"></script>
-<script src="./access/js/test.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.js"></script>
+<script src="./access/js/account.js"></script>
+<script src="./access/js/ifarme.js"></script>
+
 </html>
