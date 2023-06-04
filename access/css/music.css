@@ -1,0 +1,160 @@
+body {
+    font-family: 'Inter', sans-serif !important;
+}
+
+:root {
+    --navigation-text: #a0a0a0;
+    --text-gray: #97a7af;
+    --main-color: #1e1e1e;
+    --main-color-2: #eeee;
+    --text-color-main: #fff;
+    --bg-nav: #292929;
+    --bg-gradian: linear-gradient(to right, #bc42f2, #9d42f2, #6f42f2, #5964f2, #468bf2, #42abf2) !important;
+}
+
+.pad-12 {
+    padding: 10px 0px;
+}
+
+/* main */
+.main-music {
+    height: 85vh;
+    width: 100%;
+    display: flex;
+}
+
+.footer-nav {
+    height: 15vh;
+    background-color: #000000;
+    width: 100%;
+}
+
+/* music -nav  */
+.nav-logo {
+    width: 70%;
+    padding: 8px 0;
+}
+
+.music-nav {
+    width: 240px;
+    height: 100%;
+    background: var(--bg-nav);
+}
+
+.music-nav ul li {
+    justify-content: right;
+    list-style: none;
+    display: block;
+    width: 100%;
+    color: var(--navigation-text);
+}
+
+.music-nav ul li a {
+    padding: 12px 0;
+    display: block;
+    text-decoration: none;
+    color: var(--navigation-text);
+}
+
+.list-nav:hover a {
+    color: #fff;
+}
+
+.music-nav ul li i {
+    font-size: 20px;
+    padding: 0 18px;
+}
+
+.music-nav ul {
+    padding: 0;
+}
+
+/* music-content */
+.music-content__header {
+    padding: 0 32px;
+    height: 70px;
+    background: var(--main-color);
+}
+
+.icon-arrow {
+    font-size: 18px;
+    color: var(--text-color-main);
+}
+
+.icon-arrow div {
+    cursor: pointer;
+    padding: 12px;
+}
+
+.header-search {
+    border-radius: 50px;
+    width: 440px;
+    background-color: #333;
+}
+
+.header-search i {
+    cursor: pointer;
+    color: #757575;
+    padding: 8px 16px;
+}
+
+.header-search input {
+    width: 100%;
+    color: #757575;
+    background-color: #333;
+    border: none;
+    outline: none;
+    padding: 8px;
+    margin-right: 16px;
+}
+
+/* header rigt */
+.header__right>i {
+    cursor: pointer;
+    background-color: #333;
+    padding: 12px;
+    border-radius: 50%;
+    margin: 0 16px;
+    color: var(--navigation-text);
+}
+
+.header__right a {
+    background-color: #333;
+    text-decoration: none;
+    color: #0026ff;
+    border-radius: 50px;
+    padding: 12px 16px;
+}
+
+.header__right a i {
+    margin-left: 8px;
+}
+
+.header__right img {
+    width: 38px;
+    border-radius: 50%;
+}
+
+/* content - mmain  */
+.music-content__main {
+    padding: 32px 32px 0;
+    height: calc(100% - 70px);
+    background-color: #ccc;
+    overflow-y: scroll;
+}
+
+.music-content__main::-webkit-scrollbar {
+    width: 8px;
+    /* Độ rộng của thanh cuộn */
+}
+
+.music-content__main::-webkit-scrollbar-thumb {
+    background-color: #222;
+    /* Màu nền của thanh cuộn */
+}
+
+.music-content__main::-webkit-scrollbar-thumb:hover {
+    cursor: pointer;
+    background-color: #555;
+    /* Màu nền khi di chuột qua thanh cuộn */
+}
