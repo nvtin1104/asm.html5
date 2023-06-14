@@ -3,7 +3,15 @@ let openNav = document.getElementById('openNav');
 const navMenu = document.getElementById('nav__menu');
 openNav.addEventListener('click', () => {
     navMenu.classList.toggle('d-block');
+    if (navMenu.classList.contains('d-block')) {
+        navMenu.classList.add('open-menu');
+        navMenu.classList.remove('close-menu');
+    } else {
+        navMenu.classList.add('close-menu');
+        navMenu.classList.remove('open-menu');
+    }
 });
+
 // open modal
 let openLogin = document.getElementById('openLogin');
 let modalLogin = document.getElementById('modal-login');
@@ -68,6 +76,12 @@ class Account {
         this.userName = userName;
         this.email = email;
         this.password = pass;
+    }
+}
+class accountSave {
+    constructor(userName, password) {
+        this.userName = userName;
+        this.password = password;
     }
 }
 function xuLyDangKy(event) {
@@ -135,13 +149,14 @@ function xuLyDangKy(event) {
     //lưu mảng mới vào Localstorage 
     localStorage.setItem("loginUser", JSON.stringify(accountList))
     alert('Đăng ký tài khoản thành công')
-    location.href ='index.html';
+    location.href = 'index.html';
 }
 
 function xuLyDangNhap(event) {
     event.preventDefault();
     let userName = document.getElementById('username-si').value;
     let password = document.getElementById('password-si').value;
+    let checkboxSave = document.getElementById('checkBoxLogin').checked;
     if (userName.trim() === "" || password.trim() === "") {
         alert('Chưa nhập user hoặc mật khẩu');
         return;
@@ -152,18 +167,26 @@ function xuLyDangNhap(event) {
         if (found) {
             event.preventDefault();
             let checkLogin = 1;
-            let userNow = userName;
-            localStorage.setItem("userNow", JSON.stringify(userNow))
             localStorage.setItem("checkLogin", JSON.stringify(checkLogin))
             alert("đăng nhập thành công");
+            const userNow = found.userName;
+            localStorage.setItem("userNow", JSON.stringify(userNow))
             // check
+            if(checkboxSave){
+                let saveData = new accountSave(userName, password)
+                localStorage.setItem("saveData", JSON.stringify(saveData))
+            }
+            else{
+                localStorage.removeItem("saveData");
+            }
+            
             // bat modal login
             modalLogin.classList.remove('d-flex')
             openLogin.classList.add('d-none');
             openLoginMobile.classList.add('d-none');
             accountManagement.classList.add('account-on');
             accountManagementMobile.classList.add('account-mobile-on');
-          
+
         }
         else {
             alert("tài khoản không tồn tại")
@@ -173,3 +196,15 @@ function xuLyDangNhap(event) {
         alert("tài khoản không tồn tại")
     }
 }
+// luu tài khoản 
+const saveData = JSON.parse(localStorage.getItem("saveData"));
+let userName = document.getElementById('username-si');
+let password = document.getElementById('password-si');
+if (saveData) {
+    document.getElementById("checkBoxLogin").checked = true;
+    userName.value = saveData.userName;
+    password.value = saveData.password;
+}
+// đổ dữ liệu tên đăng nhập vào 
+document.getElementById('userNow').textContent = JSON.parse(localStorage.getItem("userNow"));
+document.getElementById('userNowMobile').textContent = JSON.parse(localStorage.getItem("userNow"));

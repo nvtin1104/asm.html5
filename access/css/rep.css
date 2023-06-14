@@ -128,9 +128,11 @@
     .account {
         display: none !important;
     }
+
     .account-mobile {
         display: none !important;
     }
+
     .account-mobile-on {
         display: block !important;
     }
@@ -156,7 +158,7 @@
         display: block !important;
     }
 
-    .nav__menu{
+    .nav__menu {
         display: none;
         position: absolute;
         top: 74px;

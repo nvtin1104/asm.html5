@@ -2,6 +2,10 @@ body {
     font-family: 'Inter', sans-serif !important;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 :root {
     --navigation-text: #a0a0a0;
     --text-gray: #97a7af;
@@ -23,11 +27,7 @@ body {
     display: flex;
 }
 
-.footer-nav {
-    height: 15vh;
-    background-color: #000000;
-    width: 100%;
-}
+
 
 /* music -nav  */
 .nav-logo {
@@ -139,8 +139,9 @@ body {
 .music-content__main {
     padding: 32px 32px 0;
     height: calc(100% - 70px);
-    background-color: #ccc;
+    background-color: #1d1d1d;
     overflow-y: scroll;
+    scroll-behavior: smooth;
 }
 
 .music-content__main::-webkit-scrollbar {
@@ -157,4 +158,170 @@ body {
     cursor: pointer;
     background-color: #555;
     /* Màu nền khi di chuột qua thanh cuộn */
+}
+
+.mC__discover--row-2,
+.mC__music {
+    padding: 32px 0 40px;
+}
+
+.mC__discover--title,
+.mC__music--title {
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: capitalize;
+    color: #fff;
+}
+
+.discover-item {
+    overflow: hidden;
+}
+
+.discover-item:hover img {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+/* music */
+.mC__music audio {
+
+    height: 70px;
+    width: 100%;
+    background-color: #0026ff;
+}
+
+/* table  */
+.music-list {
+    width: 100%;
+    display: block;
+    padding: 32px;
+}
+
+.music-list tr {
+    cursor: pointer;
+    border-top: 2px solid #222;
+}
+
+.music-list tr:last-child {
+    border-bottom: 2px solid #222;
+
+}
+
+.music-list th,
+.music-list td {
+    padding: 12px 0;
+    color: #fff;
+    display: inline-block;
+}
+
+.dot-song i {
+    padding: 0px 24px;
+    font-size: 18px;
+}
+
+.name-musican {
+    width: 400px;
+    text-align: center;
+}
+.name-musican p{
+    margin: 0;
+}
+
+.name-song img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.lh-50 {
+    line-height: 50px;
+}
+
+.name-song p {
+    margin: 0;
+    padding: 0 32px;
+}
+
+/* footer */
+.footer-nav {
+    height: 100%;
+    height: 15vh;
+    background-color: #181818;
+    width: 100%;
+    padding: 12px;
+}
+
+.infor-music {
+    align-items: center;
+    display: flex;
+    justify-content: left;
+}
+
+.infor-music i {
+    cursor: pointer;
+    color: #fff;
+    padding: 0 8px;
+}
+
+.infor-music img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.name-song__nav {
+    padding: 12px;
+}
+
+.infor-music--name {
+    font-size: 18px;
+}
+
+.infor-musican--name {
+    padding-left: 12px;
+    font-size: 12px;
+}
+
+/* control */
+.controls-top i {
+    padding: 8px 16px;
+    font-size: 24px;
+}
+
+.controls-top i:hover {
+    cursor: pointer;
+}
+
+.controls-bot input {
+    width: 300px;
+}
+
+.controls-other i {
+    cursor: pointer;
+    color: #fff;
+    padding: 8px;
+}
+
+.controls-other input {
+    width: 100px;
+}
+
+.love-music-icon {
+    width: 30px;
+    height: 30px;
+    background-color: #222;
+    margin: 8px;
+    border-radius: 10px;
+}
+
+.line {
+    width: 1px;
+    height: 18px;
+    background-color: #ccc;
+    margin: 0 8px;
+}
+/* canvas */
+canvas{
+    height:40px;
+    width: 200px;
 }

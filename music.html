@@ -23,17 +23,17 @@
                 <div class="music-nav">
                     <ul class="music-nav--main">
                         <li>
-                            <a class="text-center" href="#"><img class="nav-logo"
+                            <a class="text-center" href="index.html"><img class="nav-logo"
                                     src="./access/img/img__Index/logo.png.webp" alt=""></a>
                         </li>
                         <li class="list-nav">
-                            <a href="#"><i class="fa-solid fa-layer-group"></i>Discover</a>
+                            <a href="#discover"><i class="fa-solid fa-layer-group"></i>Discover</a>
                         </li>
                         <li class="list-nav">
                             <a href="#"><i class="fa-sharp fa-solid fa-chart-simple"></i>Music Chart</a>
                         </li>
                         <li class="list-nav">
-                            <a href="#"> <i class="fa-sharp fa-solid fa-radio"></i>Radio</a>
+                            <a href="#music"> <i class="fa-solid fa-music"></i>Music</a>
                         </li>
                         <li class="list-nav">
                             <a href="#"><i class="fa-solid fa-compact-disc"></i>Library</a>
@@ -62,19 +62,138 @@
                         </div>
                     </div>
                     <div class="music-content__main w-100">
-                        <section class="mC__discover">
+                        <section id="discover" class="mC__discover">
                             <div class="mC__discover--row row">
-                                <div class="col-sm-12 col-md-4"><img class="w-100" src="./access/img/music/discover-img-1.jpg" alt=""></div>
-                                <div class="col-sm-12 col-md-4"><img class="w-100" src="./access/img/music/discover-img-1.jpg" alt=""></div>
-                                <div class="col-sm-12 col-md-4"><img class="w-100" src="./access/img/music/discover-img-1.jpg" alt=""></div>
+                                <div class="col-sm-12 col-md-4"><img class="w-100"
+                                        src="./access/img/music/discover-img-1.jpg" alt=""></div>
+                                <div class="col-sm-12 col-md-4"><img class="w-100"
+                                        src="./access/img/music/discover-img-1.jpg" alt=""></div>
+                                <div class="col-sm-12 col-md-4"><img class="w-100"
+                                        src="./access/img/music/discover-img-1.jpg" alt=""></div>
                             </div>
+                            <div class="mC__discover--row-2">
+                                <p class="mC__discover--title">
+                                    Có Thể Bạn Muốn Nghe
+                                </p>
+                                <div class="row">
+                                    <div class="col-md-3 discover-item col-sm-12">
+                                        <img class="w-100" src="./access/img/music/discover2.webp" alt="">
+                                    </div>
+                                    <div class="col-md-3 discover-item col-sm-12">
+                                        <img class="w-100" src="./access/img/music/discover2.webp" alt="">
+                                    </div>
+                                    <div class="col-md-3 discover-item col-sm-12">
+                                        <img class="w-100" src="./access/img/music/discover2.webp" alt="">
+                                    </div>
+                                    <div class="col-md-3 discover-item col-sm-12">
+                                        <img class="w-100" src="./access/img/music/discover2.webp" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <section id="music" class="mC__music">
+                            <p class="mC__music--title">
+                                Danh sách nhạc
+                            </p>
+                            <table class="music-list">
+                                <thead class="d-block">
+                                    <tr class="w-100 d-flex">
+                                        <th class="name-song flex-grow-1 lh-50">
+                                            <p class="p-0">Name Song</p>
+                                        </th>
+                                        <th class="name-musican lh-50">Musican</th>
+                                        <th class="dot-song lh-50"><i class="fa-solid fa-ellipsis-vertical"></i></th>
+                                    </tr>
+                                </thead>
+                                <tbody id="sortable" class="d-block">
+                                    <tr draggable="true" class="w-100 d-flex" data-song="Song 1">
+                                        <td class="name-song flex-grow-1 d-flex">
+                                            <img class="song-img" src="./access/img/music/nj.jpg" alt="">
+                                            <p class="music-name lh-50 flex-grow-1">Omg</p>
+                                        </td>
+                                        <td class="name-musican lh-50">
+                                            <p class="musican-name"> NewJean </p>
+                                        </td>
+                                        <td class="dot-song lh-50"><i class="fa-solid fa-ellipsis-vertical"></i></td>
+                                    </tr>
+                                    <tr draggable="true" class="w-100 d-flex" data-song="Song 2">
+                                        <td class="name-song flex-grow-1 d-flex">
+                                            <img class="song-img" src="./access/img/music/cupid.jpg" alt="">
+                                            <p class="music-name lh-50 flex-grow-1">Cupid</p>
+                                        </td>
+                                        <td class="name-musican lh-50">
+                                            <p class="musican-name">1818</p>
+                                        </td>
+                                        <td class="dot-song lh-50"><i class="fa-solid fa-ellipsis-vertical"></i></td>
+                                    </tr>
+                                    <tr draggable="true" class="w-100 d-flex" data-song="Song 3">
+                                        <td class="name-song flex-grow-1 d-flex">
+                                            <img class="song-img" src="./access/img/music/ikon.jpg" alt="">
+                                            <p class="music-name lh-50 flex-grow-1">Love Scenario</p>
+                                        </td>
+                                        <td class="name-musican lh-50">
+                                            <p class="musican-name"> iKON</p>
+                                        </td>
+                                        <td class="dot-song lh-50"><i class="fa-solid fa-ellipsis-vertical"></i></td>
+                                    </tr>
+                                    <tr draggable="true" class="w-100 d-flex" data-song="Song 4">
+                                        <td class="name-song flex-grow-1 d-flex">
+                                            <img class="song-img" src="./access/img/music/nj.jpg" alt="">
+                                            <p class="music-name lh-50 flex-grow-1">Ditto</p>
+                                        </td>
+                                        <td class="name-musican lh-50">
+                                            <p class="musican-name"> NewJean</p>
+                                        </td>
+                                        <td class="dot-song lh-50"><i class="fa-solid fa-ellipsis-vertical"></i></td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </section>
                     </div>
                 </div>
             </div>
-            <div class="footer-nav"></div>
+            <div class="footer-nav d-flex justify-content-between">
+                <div class="infor-music">
+                    <audio id="audioPlayer" src=""></audio>
+                    <img class="img-infor" src="https://cdn0.iconfinder.com/data/icons/basic-11/97/40-512.png" alt="">
+                    <div class="name-song__nav text-white">
+                        <div class="name-song--top">
+                            <canvas id="audioCanvas"></canvas>
+                        </div>
+                       <div class="text d-flex align-items-baseline">
+                        <p class="infor-music--name  m-0">Bai hat</p>
+                        <p class="infor-musican--name float-end m-0 ">Ten tac gia</p>
+                       </div>
+                    </div>
+                    <i class="fa-regular fa-heart"></i>
+                    <i class="fa-solid fa-ellipsis"></i>
+                </div>
+                <div class="controls-music d-flex flex-column justify-content-center align-items-center">
+                    <div class="controls-top d-flex text-white justify-content-between align-items-center">
+                        <i id="pre" class="fa-solid fa-backward-step"></i>
+                        <div class="main-control">
+                            <i class="fa-solid fa-pause d-none"></i>
+                            <i class="fa-solid fa-play"></i>
+                        </div>
+                        <i id="next" class="fa-solid fa-forward-step"></i>
+                    </div>
+                    <div class="controls-bot">
+                        <input type="range" id="musicSlider" value="0">
+                    </div>
+                </div>
+                <div class="controls-other h-100 d-flex justify-content-center align-items-center">
+                    <i class="fa-solid fa-headset"></i>
+                    <i class="fa-solid fa-volume-high"></i>
+                    <input type="range" id="volumeSlider" min="0" max="1" step="0.01" value="1">
+                    <div class="line"></div>
+                    <div class="love-music-icon">
+                        <i class="fa-solid fa-chart-bar"></i>
+                    </div>
+                </div>
+            </div>
         </div>
     </main>
 </body>
+<script src="./access/js/music.js"></script>
 
 </html>

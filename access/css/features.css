@@ -1,0 +1,11 @@
+.slider-features{
+    width: 100%;
+    height: 300px;
+    margin-top: 76px;
+    background-image: linear-gradient(to top, #272a2a, #232626,#212424,#1f2323,#1c2020,#1d2020,#1a1e1e);;
+}
+.slider-features p{
+    font-size: 48px;
+    font-weight: 700;
+    color: #fff;
+}

@@ -468,27 +468,24 @@
  }
 
  /* animation */
- .fade-right {
-     animation: fade-right 1s ease-in-out;
+ .close-menu {
+     animation: fade-bot 1s ease-in-out;
  }
+ .open-menu {
+    animation: fade-top 1s ease-in-out;
+}
 
- @keyframes fade-right {
+ @keyframes fade-top {
      0% {
-         opacity: 0;
-         transform: translateX(-100%);
+         transform: translateY(-100%);
      }
 
      100% {
-         opacity: 1;
-         transform: translateX(0);
+         transform: translateY(0);
      }
  }
 
- .fade-right {
-     animation: fade-left 1s ease-in-out;
- }
-
- @keyframes fade-left {
+ @keyframes fade-bot {
      0% {
          opacity: 0;
          transform: translateX(0);
