@@ -178,6 +178,7 @@ function xuLyDangNhap(event) {
             }
             else{
                 localStorage.removeItem("saveData");
+                document.getElementById("checkBoxLogin").checked = false;
             }
             
             // bat modal login

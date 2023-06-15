@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.css">
     <link rel="icon" href="./access/img/logo.ico" type="image/x-icon">
 </head>
+
 <body>
     <main>
         <header class="header pad-12 d-flex justify-content-between">
@@ -43,8 +44,10 @@
                         <a href="./contact.html" class="nav-link">Contact</a>
                     </li>
                     <li class="link-item">
-                        <a href="account.html" id="accountMobile" class="account-mobile text-white nav-link"><i class="bi bi-person-lines-fill"></i><span id="userNowMobile">user</span></a>
-                        <div id="openLoginMobile" class="login-mobile text-white nav-link"><i class="bi bi-person-circle "></i><span>Log in</span></div>
+                        <a href="account.html" id="accountMobile" class="account-mobile text-white nav-link"><i
+                                class="bi bi-person-lines-fill"></i><span id="userNowMobile">user</span></a>
+                        <div id="openLoginMobile" class="login-mobile text-white nav-link"><i
+                                class="bi bi-person-circle "></i><span>Log in</span></div>
                     </li>
                 </ul>
             </nav>
@@ -65,7 +68,12 @@
                 <div class="col-md-6 order-2 order-md-1">
                     <!-- <div id="mapid" class="float-md-end">
                     </div> -->
-                    <iframe id="mapid" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d62277.50430941058!2d107.9845664486328!3d12.690954900000026!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3171f7d061599a29%3A0xa6267c3f346996e9!2sFPT%20Shop!5e0!3m2!1sen!2s!4v1685944501057!5m2!1sen!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <div id="btn-check">Check Location</div>
+
+                    <iframe id="mapid" class="float-md-end"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1946.1229581259638!2d108.07716608047488!3d12.697365957448596!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3171f7ad8172c5fb%3A0x8d0243eeee3bdccd!2sSONA%20coffee%26tea!5e0!3m2!1svi!2s!4v1686832953719!5m2!1svi!2s"
+                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
                 <div class="col-md-6 order-1 order-md-2">
                     <div class="contact--box">
@@ -100,7 +108,7 @@
                 </div>
             </div>
         </section>
-       
+
     </main>
     <iframe id="myIframe" src="./footer.html" width="100%" frameborder="1"></iframe>
     <div class="modal-login" id="modal-login">
@@ -110,11 +118,13 @@
             <div class="col-md-6 modal-left">
                 <div class="box-signin ">
                     <img src="./access/img/img__Index/login-avatar.jpg" alt="">
-                    <p class="modal-ask">You don't have an account?<span id="signup-open" class="ask--text"> Sign up</span></p>
+                    <p class="modal-ask">You don't have an account?<span id="signup-open" class="ask--text"> Sign
+                            up</span></p>
                 </div>
                 <div class="box-signup d-none">
                     <img src="./access/img/img__Index/login-avatar.jpg" alt="">
-                    <p class="modal-ask">You have an account?<span id="signin-open" class="ask--text"> Sign in</span></p>
+                    <p class="modal-ask">You have an account?<span id="signin-open" class="ask--text"> Sign in</span>
+                    </p>
                 </div>
             </div>
             <div class="col-md-6 modal-right">
@@ -123,9 +133,9 @@
                         Sign in
                     </p>
                     <form class="form--signin" onsubmit=" xuLyDangNhap(event)">
-                        <input  type="text" name="username" placeholder="Username..." id="username-si">
-                        <input  type="password" name="password" placeholder="Password..." id="password-si">
-                        <div class="check-box"><input  type="checkbox"><span class="mx-2">Remember me?</span>
+                        <input type="text" name="username" placeholder="Username..." id="username-si">
+                        <input type="password" name="password" placeholder="Password..." id="password-si">
+                        <div class="check-box"><input type="checkbox"><span class="mx-2">Remember me?</span>
                         </div>
                         <button type="submit" class="btn-modal">sign in</button>
                     </form>
@@ -138,10 +148,9 @@
                         <input type="text" name="username" placeholder="Username..." id="username-su">
                         <input type="email" name="email" placeholder="Email..." id="email">
                         <input type="password" name="password" placeholder="Password..." id="password-su">
-                        <input type="password" name="password" placeholder="Confirm password..."
-                            id="cf-password-su">
-                        <div class="check-box"><input id="checkAgree" type="checkbox"><span class="mx-2">Agree to the <span><a
-                                        href="#">terms</a></span> and <span><a href="#">conditions</a></span>
+                        <input type="password" name="password" placeholder="Confirm password..." id="cf-password-su">
+                        <div class="check-box"><input id="checkAgree" type="checkbox"><span class="mx-2">Agree to the
+                                <span><a href="#">terms</a></span> and <span><a href="#">conditions</a></span>
                                 conditions.</span></div>
                         <button type="submit" class="btn-modal">sign up</button>
                     </form>
@@ -149,8 +158,28 @@
             </div>
         </div>
     </div>
+    <script src="./access/js/index.js"></script>
+    <script src="./access/js/ifarme.js"></script>
+    <script>
+        let map = document.getElementById('mapid');
+        let btn = document.getElementById('btn-check');
+        btn.addEventListener('click', function () {
+            // Lấy vị trí hiện tại bằng Geolocation API
+            navigator.geolocation.getCurrentPosition(function (position) {
+                // Lấy latitude và longitude
+                var latitude = position.coords.latitude;
+                var longitude = position.coords.longitude;
+
+                // Tạo URL mới dựa trên vị trí hiện tại
+                let mapUrl = `https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d62277.50430941058!2d${longitude}!3d${latitude}!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3171f7d061599a29%3A0xa6267c3f346996e9!2sFPT%20Shop!5e0!3m2!1sen!2s!4v1685944501057!5m2!1sen!2s`;
+
+                // Nhúng iframe với URL mới
+                map.src = mapUrl;
+            });
+
+        });
+    </script>
 </body>
-<script src="./access/js/index.js"></script>
-<script src="./access/js/ifarme.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.js"></script>
+
+
 </html>

@@ -180,3 +180,19 @@
  .copyright--text a:hover {
      border-bottom: 1px solid var(--text-gray);
  }
+ /* btn check */
+ .order-2{
+    position: relative;
+ }
+ #btn-check{
+    position: absolute;
+    bottom: 32px;
+    right: 50%;
+    transform: translateX(50%);
+    padding: 16px 54px;
+    background-image: var(--bg-gradian);
+    border-radius: 30px;
+    color: #fff;
+    text-transform: uppercase;
+ }
+ 
